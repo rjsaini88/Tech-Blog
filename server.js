@@ -39,7 +39,7 @@ app.set('view engine', 'handlebars');
 
 //body parsing, url encoding, and static path middlewares
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //apply routing middleware

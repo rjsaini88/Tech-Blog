@@ -1,10 +1,10 @@
-<form name="new post" id="new-post">
+<form name="new post" id="new-post" method="POST" action="/dashboard/create">
     <input type=" text" name="title" id="title"/>
 <textarea name="body" id="body" cols="30" rows="10"></textarea>
 <button type="submit" id="submit">Creat Post</button>
 </form>
 
-<script>
+{{!-- <script>
     document.querySelector('#new-post').addEventListener("submit", async(event) => {
       event.preventDefault();  
      const response = await fetch('/dashboard/create', {
@@ -23,4 +23,4 @@
     alert('Failed to creat to post');
   }
         })
-</script>
+</script> --}}
