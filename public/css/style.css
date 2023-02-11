@@ -1,2 +1,42 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav {
+  background-color: aqua;
+  padding: 10px;
+}
+nav a:hover {
+  color: var(--black);
+  background-size: 100% 100%;
+}
+nav a {
+  color: var(--red);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  background-image: linear-gradient(90deg, purple, blue);
+  background-size: 100% 4px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  background-position: bottom;
+  margin: 0 7px;
+  transition: all 300ms ease-in-out;
+  align-items: center;
+}
+body {
+  background-image: url("../../assets/images/tech_blog_circle.jpeg");
+  background-repeat: no-repeat;
+  margin: 0px;
+  height: 300px;
 
+  /* display: flex; */
+  /* justify-content: end; */
+  /* align-items: flex-end; */
+  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
+}
 /* TODO - Write your CSS here */

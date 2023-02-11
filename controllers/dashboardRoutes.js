@@ -3,23 +3,23 @@
 // All of these routes will be protected by the withAuth middleware function.
 
 const router = require("express").Router();
-const { Post } = require("../models/");
+const { Post, User, Comment } = require("../models/");
 const withAuth = require("../utils/auth");
 
 // TODO - create logic for the GET route for / that renders the dashboard homepage
 // It should display all of the posts created by the logged in user
 router.get("/", withAuth, async (req, res) => {
   const postsData = await Post.findAll({
-    where: {userId: req.session.userId},
+    where: { userId: req.session.userId },
     order: [["createdAt", "DESC"]],
     include: [
       {
         model: User,
         attributes: ["username"],
-      }
+      },
     ],
   });
-  const posts = postsData.map((post) => post.get({plain: true}));
+  const posts = postsData.map((post) => post.get({ plain: true }));
   // TODO - retrieve all posts from the database for the logged in user
   // render the dashboard template with the posts retrieved from the database
   //default layout is set to main.handlebars, layout need to be changed to dashboard to use dashboard.handlebars

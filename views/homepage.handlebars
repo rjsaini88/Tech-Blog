@@ -1,6 +1,10 @@
 
 {{!-- TODO - write the template to show all posts on the / route --}}
 <h1>All posts from the homepage even when logged out</h1>
-{{#if username}}
+{{!-- {{#if username}}
 <p> Hello, {{username}}</p>
-{{/if}}
+{{/if}} --}}
+{{!-- <h1>My Posts</h1> --}}
+{{#each posts}}
+{{>post this}}
+{{/each}}
